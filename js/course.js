@@ -107,44 +107,43 @@ function createNav(){
 
 function buildWebSite(){
     document.body.style.fontFamily = "serif";
-    document.body.innerHTML = '
-  <nav class="navbar navbar-inverse navbar-static-top">
-   <div class="container-fluid">
-     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#" id="brand">Natural Language Processing</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav" id="fixedNav">
-       
-        <li class="dropdown">
-	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Units
-          <span class="caret"></span></a>
-        <ul class="dropdown-menu" id="sidebar">
-	</ul>
-	</li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    <div class="container">
-    <!--  <div id="toc_side" class="col-sm-3 sidebar">
-	<ul id="sidebar" class="nav nav-pills nav-stacked">
-	</ul>
-      </div>-->
-	<div class="panel panel-default" id="content_area">
-	  <div class="panel-heading" id="title"><h2>Welcome</h2></div>
-	  <div class="panel-default" id="content">
-	  </div>
-	  <div class="panel-footer">
-	   <br/> For questions/concerns, email me at:<br/><strong>f-iacobelli[at]neiu[dot]edu</strong>
-	  </div>
-	</div><!-- end of the main content area -->
-      </div><!-- end of pageFrame -->
-    </div>
-  </div>
-';
+    document.body.innerHTML = '\
+  <nav class="navbar navbar-inverse navbar-static-top">\
+   <div class="container-fluid">\
+     <div class="navbar-header">\
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">\
+        <span class="icon-bar"></span>\
+        <span class="icon-bar"></span>\
+        <span class="icon-bar"></span>\
+      </button>\
+      <a class="navbar-brand" href="#" id="brand">Natural Language Processing</a>\
+    </div>\
+    <div class="collapse navbar-collapse" id="myNavbar">\
+      <ul class="nav navbar-nav" id="fixedNav">\
+       \
+        <li class="dropdown">\
+	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Units\
+          <span class="caret"></span></a>\
+        <ul class="dropdown-menu" id="sidebar">\
+	</ul>\
+	</li>\
+      </ul>\
+    </div>\
+  </div>\
+</nav>\
+    <div class="container">\
+    <!--  <div id="toc_side" class="col-sm-3 sidebar">\
+	<ul id="sidebar" class="nav nav-pills nav-stacked">\
+	</ul>\
+      </div>-->\
+	<div class="panel panel-default" id="content_area">\
+	  <div class="panel-heading" id="title"><h2>Welcome</h2></div>\
+	  <div class="panel-default" id="content">\
+	  </div>\
+	  <div class="panel-footer">\
+	   <br/> For questions/concerns, email me at:<br/><strong>f-iacobelli[at]neiu[dot]edu</strong>\
+	  </div>\
+	</div><!-- end of the main content area -->\
+      </div><!-- end of pageFrame -->\
+    </div>\
+  </div>';
