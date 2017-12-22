@@ -50,7 +50,8 @@ function checkAnswer(value,expected){
         alert("Incorrect, Try again:"+value+"=="+expected+"?");
 }
 
-  function createMenu(){
+function createMenu(){
+    buildWebSite();
   setupTitleAndBrand();
   createNav();
   var listy = document.getElementById("sidebar");
@@ -86,7 +87,6 @@ function checkAnswer(value,expected){
   }
 
 function createNav(){
-    buildWebSite();
   var n = document.getElementById("fixedNav")
   for (var key in navMenu){
       var elem = document.createElement('li');
@@ -106,6 +106,7 @@ function createNav(){
   }
 
 function buildWebSite(){
+    document.createElement("body");
     document.body.style.fontFamily = "serif";
     document.body.innerHTML = '\
   <nav class="navbar navbar-inverse navbar-static-top">\
@@ -147,3 +148,4 @@ function buildWebSite(){
       </div><!-- end of pageFrame -->\
     </div>\
   </div>';
+}
