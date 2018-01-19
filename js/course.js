@@ -1,6 +1,10 @@
 var numUnits=2;
 var visibleDivId="welcome";
+var params = new URLSearchParams(window.location.search);
+var unit = params.get("unit");
+var thisPage = window.location.origin+window.location.pathname
 //addDisclaimer("homework");
+
 function openDiv(li,d_id,src){
    // alert(li.innerHTML);
    try{
@@ -65,7 +69,8 @@ function createMenu(){
       elem.appendChild(lnk);
       elem.setAttribute("role","presentation");
       (function(k) {
-	  lnk.addEventListener("click", function() { loadPage(this, ifSrc[k].title,ifSrc[k].src)}, false);
+	  //lnk.addEventListener("click", function() { loadPage(this, ifSrc[k].title,ifSrc[k].src)}, false);
+	  lnk.addEventListener("click", function() {window.location = thisPage+"?unit="+k},false)
 	      })(key);
       listy.appendChild(elem);
       }
@@ -86,7 +91,7 @@ function createMenu(){
   		});
   }
 
-function createNav(){
+ function createNav(){
   var n = document.getElementById("fixedNav")
   for (var key in navMenu){
       var elem = document.createElement('li');
@@ -97,6 +102,7 @@ function createNav(){
       n.insertBefore(elem,n.childNodes[1]);
   }
   }
+
 
   function setupTitleAndBrand(){
      document.title=courseName;
@@ -147,5 +153,12 @@ function buildWebSite(){
 	</div><!-- end of the main content area -->\
       </div><!-- end of pageFrame -->\
     </div>\
-  </div>';
+</div>';
+}
+
+function readyPage(){
+    if(unit!=undefined)
+	loadPage(this, ifSrc[unit].title,ifSrc[unit].src);
+    else
+	console.log("No unit");
 }
